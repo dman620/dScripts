@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo please tell me your name:
+read name
+echo are you lying?..
+echo "(y/n)"
+read lying
+
+if [ "$name" == $USER ] && [ "$lying" == 'n' ]
+then echo you are the current user! Hello there!
+else echo you are not the current user! Hello there!
+fi
+
+

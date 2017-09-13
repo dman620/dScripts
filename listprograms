@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo search installed programs and packages for what program name?
+read program
+
+dpkg --list | grep "$program"

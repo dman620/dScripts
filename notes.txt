@@ -1,0 +1,92 @@
+This is a file I am writing to remind myself how to setup scripts to run on my machine,
+incase I forget later.
+
+I have setup a directory in /home/derek/myscripts
+where I will keep my scripts.  I have added it to the
+$PATH using the hidden .bashrc,  check there if there
+are problems.
+
+add to the top of a un named file "#!/bin/bash"
+this tells the system that it is an executable
+bash file.
+
+save it without any extention.  Apparently this is customary.
+
+It is also worth mentioning that if you create the file with a .sh
+extension, the line "#!/bin/bash" is not necessary
+
+
+
+put it into the /home/derek/myscripts folder.
+
+make sure to set up execute permissions
+
+use chmod
+
+To view the permissions of a script, type:
+
+$l -l scriptname
+
+
+
+
+
+
+also, comments are "#" before the commented line.
+
+-------------------------------------------------------------
+this is notes of syntax so that I can remember easier and also
+so I can refference them later
+
+the syntax for if is:
+if condition ; then
+   execute
+fi
+
+there is another type of evaluation called test, it is commonly used
+with if.  it goes
+[ expression]
+it returns a 0 for true and 1 for false.  this sounds backwards, but it
+works with exit statuses, not boolean values.  i.e. an exit status of 0 means
+that there are no problems, just like in c++.
+
+an example is:
+
+if [ -f .bash_profile ]; then
+   echo ".bash_profile exists"
+else
+   echo "YOU HAVE NO BASH_PROFILE"
+fi
+we can also format it like
+
+if [ expression ]
+then echo "quote quote"
+else echo "quote2 quote2"
+fi
+
+i think most things are closed by spelling them out backwards.
+if is closed by fi
+
+
+
+this is a list of expressions that can be used with test
+a complete list can be found with the command help test
+-d dir	   	= true if dir is a directory
+-e file    	= true if file exists
+-f file	   	= true if file exists and is a regular file
+-L file	   	= true if file is a symbolic link
+-r file	   	= true if file is a file readable by you
+-w file	   	= true if the file is writable by you
+-x file	     	= true if the file is executable by you
+-z string	= true if string is empty
+-n string 	= true if string is not empty
+file1 -nt file2	        = true if file1 is newer than file2 (last modified time)
+file1 -ot file2	        = true if file1 is older than file2
+string1 = string2       = true if string1 equals string2
+string1 != string2	= true if string1 does not equal string2
+
+a ; is a command seperator
+we can put more than one command on a line with this.
+clear ; clear
+sudo apt-get update ; sudo apt-get upgrade
+

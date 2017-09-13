@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "This is a list of all files within the ~/myscripts directory:"
+
+ls -l ~/myscripts
+echo "------------------DESCRIPTIONS-------------------------"
+
+cat ~/myscripts/desc.txt
